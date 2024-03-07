@@ -1,0 +1,32 @@
+---
+services:
+  webcord:
+    image: lscr.io/linuxserver/webcord:latest
+    container_name: webcord
+    security_opt:
+      - seccomp:unconfined
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - CUSTOM_PORT=5000
+      - CUSTOM_HTTPS_PORT=5001
+      - TZ=Etc/UTC
+    volumes:
+      - ./Webcord/config:/config
+    network_mode: host
+    shm_size: "1gb"
+    restart: unless-stopped
+
+  nso-rpc:
+    image: ghcr.io/hotarublaze/nso-rpc-docker:latest
+    container_name: nso-rpc
+    network_mode: host
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./NSO-RPC:/root/Documents/NSO-RPC
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    restart: unless-stopped
