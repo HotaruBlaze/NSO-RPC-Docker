@@ -69,7 +69,7 @@ To run the Docker setup, it requires a hands-on approach to get started.
 
 ### Subsequent runs
 
-For subsequent runs, you only need to to:
+For subsequent runs, you only need to:
 
 1. Run
    ```sh
