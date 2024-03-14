@@ -40,13 +40,12 @@ To run the Docker setup, it requires a hands-on approach to get started.
 
 1. After setting your user ID, you wont get output back. Type `Ctrl + C` to stop the container.
 
-1. Run
+1. Run the following to start the containers.
    ```sh
    docker compose up -d
    ```
-   to start the containers.
 
-1. Open a web browser and go to `http://localhost:3000` or `http://127.0.0.1:3000` to connect to the WebCord container.
+1. Open a web browser and go to `http://your_server_hostname:3000` or `http://your_server_ip:3000` to connect to the WebCord container.
 
 1. Log in to Discord. If you have issues with the QR code, log in directly.
 
@@ -58,11 +57,13 @@ To run the Docker setup, it requires a hands-on approach to get started.
 
 1. Restart Webcord via `File > Relaunch`.
 
-1. Open Chrome Dev Tools in Webcord by pressing `Ctrl + Shift + I`, and then select console, and type `allow pasting`
+1. Open Chrome Dev Tools in Webcord by pressing `Ctrl + Shift + I`, and then click on `Console`.
 
 1. Now paste the contents of `webcord-hook.js` into the console and press Enter. (This script can also be found on arRPC's repo [here](https://github.com/OpenAsar/arrpc/blob/main/examples/bridge_mod.js)).
 
-   **NOTE**: To be able to paste, you might need to use KasmVNC's Clipboard feature by clicking on the little arrow on the left of the screen, then clicking on "Clipboard" and pasting the `webcord-hook.js` contents inside the text box that shows up, before you're able to paste it on the console.
+   **NOTE 1**: To be able to paste, you might need to use KasmVNC's Clipboard feature by clicking on the little arrow on the left of the screen, then clicking on "Clipboard" and pasting the `webcord-hook.js` contents inside the text box that shows up, before you're able to paste it on the console.
+
+   **NOTE 2**: The first time you try to paste on Chrome's console, you might need to type `allow pasting` first.
 
 **You should now be fully setup and should see Switch RPC presence on your account.**
 
